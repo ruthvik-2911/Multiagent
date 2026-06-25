@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Knowledge Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">
+            <span class="icon">🌌</span>
+            <h2>Knowledge AI</h2>
+        </div>
+        <ul class="nav-links">
+            <li data-target="dashboard" class="active"><span>🏠</span> Dashboard</li>
+            <li data-target="upload"><span>📂</span> Upload Documents</li>
+            <li data-target="documents"><span>📄</span> Documents</li>
+            <li data-target="chat"><span>💬</span> AI Chat</li>
+            <li data-target="architecture"><span>⚙️</span> Architecture</li>
+        </ul>
+        
+        <div class="system-status">
+            <h4>System Status</h4>
+            <div class="status-item"><span>Qdrant</span> <span class="badge ok">🟢 Online</span></div>
+            <div class="status-item"><span>Ollama</span> <span class="badge ok">🟢 Online</span></div>
+            <div class="status-item"><span>FastAPI</span> <span class="badge ok">🟢 Online</span></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="page active">
+            <header>
+                <h1>Dashboard</h1>
+                <p>Enterprise Knowledge Assistant</p>
+            </header>
+            
+            <div class="cards-grid">
+                <div class="card stat-card">
+                    <h3>Uploaded Documents</h3>
+                    <h2 id="total-docs-count">0 Files</h2>
+                    <div class="doc-breakdown">
+                        <span class="pill pdf">PDF : <b id="pdf-count">0</b></span>
+                        <span class="pill docx">DOCX : <b id="docx-count">0</b></span>
+                        <span class="pill xlsx">Excel : <b id="xlsx-count">0</b></span>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <h3>Knowledge Base</h3>
+                    <h2 class="text-glow">Indexed & Active</h2>
+                </div>
+                <div class="card stat-card">
+                    <h3>AI Model</h3>
+                    <h2>Llama 3.2</h2>
+                    <p class="status-text">🟢 Running</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section id="upload" class="page">
+            <header>
+                <h1>Upload Document</h1>
+                <p>Drag & drop or select a file to instantly index it into the knowledge base.</p>
+            </header>
+            
+            <div class="upload-container">
+                <div class="dropzone" id="dropzone">
+                    <span class="upload-icon">☁️</span>
+                    <h3>Drag & Drop</h3>
+                    <p>or</p>
+                    <label for="file-upload" class="btn primary-btn">Choose File</label>
+                    <input type="file" id="file-upload" accept=".pdf,.docx,.xlsx">
+                    
+                    <div class="supported-formats">
+                        <span class="pill">✓ PDF</span>
+                        <span class="pill">✓ DOCX</span>
+                        <span class="pill">✓ XLSX</span>
+                    </div>
+                </div>
+                <div id="upload-status" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Uploading and Indexing...</p>
+                </div>
+                <div id="upload-success" class="hidden">
+                    <span class="success-icon">✅</span>
+                    <p>File successfully embedded into Qdrant!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documents Section -->
+        <section id="documents" class="page">
+            <header>
+                <h1>Indexed Documents</h1>
+                <p>All files currently embedded in the Qdrant vector database.</p>
+            </header>
+            
+            <div class="documents-list" id="docs-list">
+                <!-- Injected via JS -->
+                <div class="spinner"></div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat" class="page chat-page">
+            <header>
+                <h1>AI Chat</h1>
+                <p>Ask anything. Powered by Llama 3.2 + Qdrant RAG.</p>
+            </header>
+            
+            <div class="chat-container">
+                <div class="chat-history" id="chat-history">
+                    <div class="message assistant">
+                        <div class="avatar">🤖</div>
+                        <div class="bubble">Hello! I am your Enterprise Knowledge Assistant. Ask me a question about your documents!</div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Ask anything about company policies, sales, or history...">
+                    <button id="send-btn" class="btn primary-btn">Send 🚀</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section id="architecture" class="page">
+            <header>
+                <h1>Architecture Diagram</h1>
+                <p>The automated RAG ingestion & generation pipeline.</p>
+            </header>
+            
+            <div class="arch-diagram">
+                <div class="node source-docs">
+                    📄 PDFs, DOCX, Excel
+                </div>
+                <div class="arrow">↓</div>
+                <div class="node auto-index">
+                    ⚙️ Auto Indexer API
+                </div>
+                <div class="arrow">↓</div>
+                <div class="node embeddings">
+                    🧠 Embedding Model
+                    <small>(all-MiniLM-L6-v2)</small>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="node qdrant">
+                    🗄️ Qdrant Database
+                    <small>(Vector Storage)</small>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="node llama">
+                    🦙 Llama 3.2 
+                    <small>(Ollama Local LLM)</small>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="node answer">
+                    ✨ Final Answer
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
