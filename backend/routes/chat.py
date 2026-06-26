@@ -6,8 +6,4 @@ router = APIRouter()
 
 @router.post("/chat")
 def chat(request: ChatRequest):
-    answer = generate_answer(request.question)
-    return {
-        "question": request.question,
-        "answer": answer
-    }
+    return generate_answer(request.question)

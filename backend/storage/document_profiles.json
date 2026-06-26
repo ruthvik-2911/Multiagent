@@ -1,0 +1,140 @@
+[
+    {
+        "file_name": "sales.xlsx",
+        "display_name": "sales",
+        "summary": "The document presents a simple table analyzing product revenue, with rows representing individual products (Laptop, Mobile, and Tablet) and columns for the product name and revenue amount. The data suggests that Laptop generates the highest revenue at $100,000, followed by Mobile and Tablet, which generate $80,000 and $50,000 in revenue respectively.",
+        "keywords": [
+            "Laptop",
+            "Revenue",
+            "Mobile",
+            "Tablet"
+        ],
+        "folder": "Analytics",
+        "file_type": "xlsx",
+        "total_chunks": 1,
+        "indexed_at": "2026-06-25T21:24:58.544034"
+    },
+    {
+        "file_name": "HISTORY-ENGLISH.pdf",
+        "display_name": "HISTORY ENGLISH",
+        "summary": "The document is a textbook for Class XII, focusing on Indian History, with themes in Part II rationalized for the 2023-24 academic year. The publication details include multiple reprints and revisions, as well as copyright information and office contact details, managed by the National Council of Educational Research and Training (NCERT).",
+        "keywords": [
+            "Indian History",
+            "National Curriculum Framework",
+            "Textbook",
+            "Syllabi",
+            "Learning"
+        ],
+        "folder": "Contracts",
+        "file_type": "pdf",
+        "total_chunks": 667,
+        "indexed_at": "2026-06-25T21:25:17.005476"
+    },
+    {
+        "file_name": "BAD601-module-3-pdf (1).pdf",
+        "display_name": "BAD601 module 3 pdf (1)",
+        "summary": "This document provides an introduction to MongoDB, a cross-platform, open-source, non-relational, distributed, and document-oriented database that addresses the challenges of traditional RDBMS in handling large volumes of data, rich variety of data types, and meeting scale requirements. The document also discusses the use of JavaScript Object Notation (JSON) as a data format for storing complex data structures and its advantages over XML in simple data exchange scenarios.",
+        "keywords": [
+            "Cross-platform",
+            "Non-relational",
+            "NoSQL",
+            "Distributed",
+            "Document-oriented"
+        ],
+        "folder": "Policies",
+        "file_type": "pdf",
+        "total_chunks": 157,
+        "indexed_at": "2026-06-25T21:26:20.186757"
+    },
+    {
+        "file_name": "Enterprise_Knowledge_Assistant_Platform.docx",
+        "display_name": "Enterprise Knowledge Assistant Platform",
+        "summary": "This document outlines a comprehensive technical blueprint for implementing an Enterprise Multi-Agent Knowledge Assistant Platform that leverages cutting-edge technologies such as Retrieval-Augmented Generation (RAG) and multi-agent AI orchestration to deliver accurate answers through a conversational chatbot interface. The platform can be deployed using either Microsoft's Azure services or open-source technologies, with the recommended approach depending on the organization's specific context, budget, and strategic direction.",
+        "keywords": [
+            "Enterprise",
+            "AI",
+            "Platform",
+            "Chatbot",
+            "Knowledge"
+        ],
+        "folder": "Policies",
+        "file_type": "docx",
+        "total_chunks": 10,
+        "indexed_at": "2026-06-25T21:27:19.506597"
+    },
+    {
+        "file_name": "Policy.docx",
+        "display_name": "Policy",
+        "summary": "The Company AI Usage Policy outlines the responsible use of artificial intelligence tools by all employees, emphasizing the importance of maintaining data privacy and confidentiality. Employees are prohibited from uploading confidential company data to public AI services, ensuring adherence to data protection regulations.",
+        "keywords": [
+            "AI",
+            "policy",
+            "responsible",
+            "data",
+            "privacy"
+        ],
+        "folder": "Policies",
+        "file_type": "docx",
+        "total_chunks": 1,
+        "indexed_at": "2026-06-25T21:27:35.622035"
+    },
+    {
+        "file_name": "ProgramsGenAI (2).docx",
+        "display_name": "ProgramsGenAI (2)",
+        "summary": "This document outlines three programs aimed at exploring and analyzing word vectors, with the first program focusing on using pre-trained models to understand word relationships and perform arithmetic operations, while the second program utilizes dimensionality reduction techniques like PCA or t-SNE to visualize word embeddings in a lower-dimensional space. The third program involves training a custom Word2Vec model on a small dataset to explore domain-specific word relationships and generate semantically similar words for input.",
+        "keywords": [
+            "word vectors",
+            "word embeddings",
+            "vector arithmetic"
+        ],
+        "folder": "Policies",
+        "file_type": "docx",
+        "total_chunks": 35,
+        "indexed_at": "2026-06-25T21:28:30.407593"
+    },
+    {
+        "file_name": "Ruthvik_resume_internship (3).pdf",
+        "display_name": "Ruthvik resume internship (3)",
+        "summary": "Ruthvik is a third-year B.E. Computer Science and Data Science student with expertise in Data Analytics, Artificial Intelligence, Machine Learning, and Full Stack Web Development, having completed projects such as AI-driven business intelligence for MSMEs and smart food donation platforms. He has demonstrated his skills through various academic achievements, hackathons, and job simulations, showcasing his proficiency in programming languages, frameworks, and tools.",
+        "keywords": [
+            "C",
+            "Python",
+            "Machine Learning",
+            "TensorFlow",
+            "JavaScript"
+        ],
+        "folder": "Policies",
+        "file_type": "pdf",
+        "total_chunks": 7,
+        "indexed_at": "2026-06-25T21:29:30.599585"
+    },
+    {
+        "file_name": "sample1.txt",
+        "display_name": "Sample1",
+        "summary": "Project Alpha has successfully completed its first phase, with seamless integration of the new payment gateway, and is poised to move forward with phase 2 starting the following week. This update from Alice indicates a significant progress in the project's development and ongoing optimization efforts.",
+        "keywords": [
+            "payment gateway",
+            "project alpha",
+            "phase 1",
+            "phase 2",
+            "integration"
+        ],
+        "folder": "Inbox",
+        "file_type": "eml",
+        "total_chunks": 1,
+        "indexed_at": "2026-06-26T00:53:24.828517"
+    },
+    {
+        "file_name": "sample2.txt",
+        "display_name": "Sample2",
+        "summary": "A reminder to submit all Q2 deliverables by Friday evening, with a quarterly review meeting set for Monday at 10 AM. Team members are expected to meet this deadline to ensure a comprehensive review of their progress during the upcoming meeting.",
+        "keywords": [
+            "None",
+            "as there are no keywords in the document to extract. The document appears to be a simple email with only plain text."
+        ],
+        "folder": "Inbox",
+        "file_type": "eml",
+        "total_chunks": 1,
+        "indexed_at": "2026-06-26T00:53:43.093849"
+    }
+]
