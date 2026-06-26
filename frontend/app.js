@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+    
     // --- Navigation Logic ---
     const navItems = document.querySelectorAll(".nav-links li");
     const pages = document.querySelectorAll(".page");
@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
             // Load data when a specific page is visited
             if (target === "dashboard") loadDashboard();
             if (target === "documents") loadDocuments();
-            if (target === "chat") loadFileSelect();
         });
     });
 
@@ -35,21 +34,61 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function loadDashboard() {
-        const docs = await fetchDocuments();
+        try {
+            const hRes = await fetch("/health");
+            const health = await hRes.json();
+            document.getElementById("h-qdrant").innerText = `🟢 ${health.qdrant}`;
+            document.getElementById("h-neo4j").innerText = `🟢 ${health.neo4j}`;
+            document.getElementById("h-ollama").innerText = `🟢 ${health.ollama}`;
+            document.getElementById("h-planner").innerText = `🟢 ${health.planner}`;
+            document.getElementById("h-supervisor").innerText = `🟢 ${health.supervisor}`;
+        } catch (e) {}
 
-        let pdfs = 0, docx = 0, xlsx = 0;
+        try {
+            const mRes = await fetch("/metrics");
+            const metrics = await mRes.json();
+            document.getElementById("m-vectors").innerText = metrics.total_vectors;
+            document.getElementById("m-docs").innerText = metrics.total_docs;
+            document.getElementById("m-agents").innerText = metrics.agents;
+        } catch(e) {}
 
-        docs.forEach(file => {
-            const ext = file.split('.').pop().toLowerCase();
-            if (ext === "pdf") pdfs++;
-            if (ext === "docx") docx++;
-            if (ext === "xlsx" || ext === "xls") xlsx++;
-        });
+        const log = document.getElementById("activity-log");
+        try {
+            const res = await fetch("/activity");
+            const activities = await res.json();
+            log.innerHTML = "";
+            activities.forEach(act => {
+                const date = new Date(act.timestamp);
+                const timeAgo = Math.floor((Date.now() - date.getTime()) / 1000) + " sec ago";
+                log.innerHTML += `
+                    <div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <div style="color: #10b981; font-weight: 500;">🟢 ${act.event}</div>
+                        <div style="color: var(--text-main); margin-top: 5px;">${act.source}</div>
+                        <div style="color: var(--text-muted); font-size: 0.8em; margin-top: 5px;">${timeAgo}</div>
+                    </div>
+                `;
+            });
+        } catch (e) {
+            log.innerHTML = "<p>Failed to load activity.</p>";
+        }
+    }
 
-        document.getElementById("total-docs-count").innerText = `${docs.length} Files`;
-        document.getElementById("pdf-count").innerText = pdfs;
-        document.getElementById("docx-count").innerText = docx;
-        document.getElementById("xlsx-count").innerText = xlsx;
+    // --- Enterprise Activity Real-Time SSE ---
+    const activityLog = document.getElementById("activity-log");
+    if (activityLog) {
+        const evtSource = new EventSource("/api/events");
+        evtSource.onmessage = function(event) {
+            const logEntry = document.createElement("div");
+            logEntry.style.marginBottom = "15px";
+            logEntry.style.paddingBottom = "10px";
+            logEntry.style.borderBottom = "1px solid rgba(255,255,255,0.05)";
+            logEntry.innerHTML = `
+                <div style="color: #10b981; font-weight: 500;">🟢 ${event.data.replace('🟢 ', '')}</div>
+                <div style="color: var(--text-main); margin-top: 5px;">Live Update</div>
+                <div style="color: var(--text-muted); font-size: 0.8em; margin-top: 5px;">Just now</div>
+            `;
+            activityLog.prepend(logEntry);
+        };
     }
 
     async function loadDocuments() {
@@ -81,43 +120,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- File Scope Dropdown (for chat) ---
-    async function loadFileSelect() {
-        const select = document.getElementById("file-select");
-        if (!select) return;
-
-        const current = select.value;          // remember current choice
-        const docs = await fetchDocuments();
-
-        select.innerHTML = `<option value="">All files</option>`;
-        docs.forEach(file => {
-            const opt = document.createElement("option");
-            opt.value = file;
-            opt.textContent = file;
-            select.appendChild(opt);
-        });
-
-        // restore previous selection if it still exists
-        if (current && docs.includes(current)) {
-            select.value = current;
-        }
-    }
-
     // --- Upload Logic ---
     const fileInput = document.getElementById("file-upload");
     const dropzone = document.getElementById("dropzone");
     const uploadStatus = document.getElementById("upload-status");
     const uploadSuccess = document.getElementById("upload-success");
 
+    // Click handler for drag and drop visual is handled by label 'for' attribute
+    
+    // File drop handlers
     dropzone.addEventListener("dragover", (e) => {
         e.preventDefault();
         dropzone.classList.add("dragover");
     });
-
+    
     dropzone.addEventListener("dragleave", () => {
         dropzone.classList.remove("dragover");
     });
-
+    
     dropzone.addEventListener("drop", async (e) => {
         e.preventDefault();
         dropzone.classList.remove("dragover");
@@ -148,10 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (res.ok) {
                 uploadStatus.classList.add("hidden");
                 uploadSuccess.classList.remove("hidden");
-
-                // refresh the chat file dropdown so the new file is selectable
-                loadFileSelect();
-
+                
                 // Reset after 3 seconds
                 setTimeout(() => {
                     uploadSuccess.classList.add("hidden");
@@ -174,17 +191,46 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatInput = document.getElementById("chat-input");
     const sendBtn = document.getElementById("send-btn");
 
-    function appendMessage(text, sender) {
+    function appendMessage(text, sender, data = null) {
         const msgDiv = document.createElement("div");
         msgDiv.className = `message ${sender}`;
-
+        
         const avatar = sender === "user" ? "👤" : "🤖";
-
+        
+        let bubbleContent = `<div class="text-content">${text}</div>`;
+        
+        if (data && data.selected_document) {
+            const keywordsHTML = (data.keywords || []).map(k => `<span class="pill" style="display:inline-block; margin:2px; padding:2px 6px; background:rgba(255,255,255,0.1); border-radius:4px; font-size:0.8em;">${k}</span>`).join(" ");
+            const confPercent = Math.round(data.confidence * 100);
+            bubbleContent += `
+                <div class="enterprise-panel" style="margin-top: 15px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9em;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <div>
+                            <strong style="color:var(--text-light)">Selected Document</strong><br>
+                            📄 ${data.selected_document}
+                        </div>
+                        <div style="text-align: right;">
+                            <strong style="color:var(--text-light)">Confidence</strong><br>
+                            ${confPercent}%
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong style="color:var(--text-light)">Summary</strong><br>
+                        ${data.summary}
+                    </div>
+                    <div>
+                        <strong style="color:var(--text-light)">Keywords</strong><br>
+                        ${keywordsHTML}
+                    </div>
+                </div>
+            `;
+        }
+        
         msgDiv.innerHTML = `
             <div class="avatar">${avatar}</div>
-            <div class="bubble">${text}</div>
+            <div class="bubble">${bubbleContent}</div>
         `;
-
+        
         chatHistory.appendChild(msgDiv);
         chatHistory.scrollTop = chatHistory.scrollHeight;
     }
@@ -193,18 +239,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const question = chatInput.value.trim();
         if (!question) return;
 
-        // If a specific file is selected, scope the query to it using the
-        // backend's "filename :: question" convention. "All files" => no prefix.
-        const select = document.getElementById("file-select");
-        const selectedFile = select ? select.value : "";
-        const payloadQuestion = selectedFile
-            ? `${selectedFile} :: ${question}`
-            : question;
-
-        // Show the user's plain question (not the prefixed version)
         appendMessage(question, "user");
         chatInput.value = "";
-
+        
         // Show typing indicator
         const typingId = "typing-" + Date.now();
         const typingDiv = document.createElement("div");
@@ -221,12 +258,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const res = await fetch("/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ question: payloadQuestion })
+                body: JSON.stringify({ question })
             });
             const data = await res.json();
-
+            
             document.getElementById(typingId).remove();
-            appendMessage(data.answer, "assistant");
+            appendMessage(data.answer, "assistant", data);
         } catch (e) {
             document.getElementById(typingId).remove();
             appendMessage("Error connecting to server.", "assistant");
@@ -240,5 +277,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial Load
     loadDashboard();
-    loadFileSelect();
 });

@@ -1,0 +1,13 @@
+Subject: Project Alpha Update
+From: alice@enterprise.com
+To: bob@enterprise.com
+Date: 2026-06-25
+
+Hi Bob,
+
+Just wanted to give you a quick update on Project Alpha. We've successfully completed phase 1. The integration with the new payment gateway is working flawlessly.
+
+We will begin phase 2 next week.
+
+Thanks,
+Alice

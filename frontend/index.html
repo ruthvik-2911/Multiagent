@@ -40,24 +40,21 @@
                 <p>Enterprise Knowledge Assistant</p>
             </header>
             
-            <div class="cards-grid">
-                <div class="card stat-card">
-                    <h3>Uploaded Documents</h3>
-                    <h2 id="total-docs-count">0 Files</h2>
-                    <div class="doc-breakdown">
-                        <span class="pill pdf">PDF : <b id="pdf-count">0</b></span>
-                        <span class="pill docx">DOCX : <b id="docx-count">0</b></span>
-                        <span class="pill xlsx">Excel : <b id="xlsx-count">0</b></span>
-                    </div>
-                </div>
-                <div class="card stat-card">
-                    <h3>Knowledge Base</h3>
-                    <h2 class="text-glow">Indexed & Active</h2>
-                </div>
-                <div class="card stat-card">
-                    <h3>AI Model</h3>
-                    <h2>Llama 3.2</h2>
-                    <p class="status-text">🟢 Running</p>
+            <div class="system-health-bar" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px;">
+                <span class="pill">Qdrant: <b id="h-qdrant" class="text-glow">🟢 Connected</b></span>
+                <span class="pill">Neo4j: <b id="h-neo4j" class="text-glow">🟢 Connected</b></span>
+                <span class="pill">Ollama: <b id="h-ollama" class="text-glow">🟢 Running</b></span>
+                <span class="pill">Planner: <b id="h-planner" class="text-glow">🟢 Active</b></span>
+                <span class="pill">Supervisor: <b id="h-supervisor" class="text-glow">🟢 Active</b></span>
+                <span class="pill" style="margin-left: auto;">Vectors: <b id="m-vectors">0</b></span>
+                <span class="pill">Documents: <b id="m-docs">0</b></span>
+                <span class="pill">Agents: <b id="m-agents">0</b></span>
+            </div>
+            
+            <div class="card stat-card" style="width: 100%;">
+                <h3>Enterprise Activity</h3>
+                <div id="activity-log" style="height: 400px; overflow-y: auto; text-align: left; margin-top: 15px;">
+                    <div class="spinner"></div>
                 </div>
             </div>
         </section>

@@ -1,0 +1,7 @@
+Subject: Automated System Test
+From: event_manager@enterprise.com
+To: admin@enterprise.com
+Date: 2026-06-25
+
+This is an automated test of the newly integrated watchdog FileSystemEventHandler.
+If this file is detected, it should be processed by the Outlook connector and appear in the real-time activity dashboard via Server-Sent Events.

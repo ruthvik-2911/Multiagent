@@ -1,0 +1,11 @@
+Subject: Urgent: Quarterly Review
+From: charlie@enterprise.com
+To: team@enterprise.com
+Date: 2026-06-25
+
+Team,
+
+Please ensure all your deliverables for Q2 are submitted by Friday EOD. The quarterly review meeting is scheduled for Monday at 10 AM.
+
+Regards,
+Charlie
