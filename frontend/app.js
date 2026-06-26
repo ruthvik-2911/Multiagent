@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     // --- Navigation Logic ---
     const navItems = document.querySelectorAll(".nav-links li");
     const pages = document.querySelectorAll(".page");
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Load data when a specific page is visited
             if (target === "dashboard") loadDashboard();
             if (target === "documents") loadDocuments();
+            if (target === "chat") loadFileSelect();
         });
     });
 
@@ -35,9 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function loadDashboard() {
         const docs = await fetchDocuments();
-        
+
         let pdfs = 0, docx = 0, xlsx = 0;
-        
+
         docs.forEach(file => {
             const ext = file.split('.').pop().toLowerCase();
             if (ext === "pdf") pdfs++;
@@ -80,24 +81,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // --- File Scope Dropdown (for chat) ---
+    async function loadFileSelect() {
+        const select = document.getElementById("file-select");
+        if (!select) return;
+
+        const current = select.value;          // remember current choice
+        const docs = await fetchDocuments();
+
+        select.innerHTML = `<option value="">All files</option>`;
+        docs.forEach(file => {
+            const opt = document.createElement("option");
+            opt.value = file;
+            opt.textContent = file;
+            select.appendChild(opt);
+        });
+
+        // restore previous selection if it still exists
+        if (current && docs.includes(current)) {
+            select.value = current;
+        }
+    }
+
     // --- Upload Logic ---
     const fileInput = document.getElementById("file-upload");
     const dropzone = document.getElementById("dropzone");
     const uploadStatus = document.getElementById("upload-status");
     const uploadSuccess = document.getElementById("upload-success");
 
-    // Click handler for drag and drop visual is handled by label 'for' attribute
-    
-    // File drop handlers
     dropzone.addEventListener("dragover", (e) => {
         e.preventDefault();
         dropzone.classList.add("dragover");
     });
-    
+
     dropzone.addEventListener("dragleave", () => {
         dropzone.classList.remove("dragover");
     });
-    
+
     dropzone.addEventListener("drop", async (e) => {
         e.preventDefault();
         dropzone.classList.remove("dragover");
@@ -128,7 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (res.ok) {
                 uploadStatus.classList.add("hidden");
                 uploadSuccess.classList.remove("hidden");
-                
+
+                // refresh the chat file dropdown so the new file is selectable
+                loadFileSelect();
+
                 // Reset after 3 seconds
                 setTimeout(() => {
                     uploadSuccess.classList.add("hidden");
@@ -154,14 +177,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function appendMessage(text, sender) {
         const msgDiv = document.createElement("div");
         msgDiv.className = `message ${sender}`;
-        
+
         const avatar = sender === "user" ? "👤" : "🤖";
-        
+
         msgDiv.innerHTML = `
             <div class="avatar">${avatar}</div>
             <div class="bubble">${text}</div>
         `;
-        
+
         chatHistory.appendChild(msgDiv);
         chatHistory.scrollTop = chatHistory.scrollHeight;
     }
@@ -170,9 +193,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const question = chatInput.value.trim();
         if (!question) return;
 
+        // If a specific file is selected, scope the query to it using the
+        // backend's "filename :: question" convention. "All files" => no prefix.
+        const select = document.getElementById("file-select");
+        const selectedFile = select ? select.value : "";
+        const payloadQuestion = selectedFile
+            ? `${selectedFile} :: ${question}`
+            : question;
+
+        // Show the user's plain question (not the prefixed version)
         appendMessage(question, "user");
         chatInput.value = "";
-        
+
         // Show typing indicator
         const typingId = "typing-" + Date.now();
         const typingDiv = document.createElement("div");
@@ -189,10 +221,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const res = await fetch("/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ question })
+                body: JSON.stringify({ question: payloadQuestion })
             });
             const data = await res.json();
-            
+
             document.getElementById(typingId).remove();
             appendMessage(data.answer, "assistant");
         } catch (e) {
@@ -208,4 +240,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial Load
     loadDashboard();
+    loadFileSelect();
 });

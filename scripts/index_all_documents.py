@@ -1,7 +1,12 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from backend.utils.diagram_reader import read_diagram
 import os
 import uuid
 import pandas as pd
-
+from backend.utils.drawio_reader import read_drawio
+from backend.utils.pdf_diagram_reader import read_pdf_diagram
+from backend.utils.pdf_smart_reader import read_pdf_smart
 from pypdf import PdfReader
 from docx import Document
 
@@ -104,13 +109,17 @@ def index_file(path):
     try:
 
         if ext == ".pdf":
-            text = read_pdf(path)
+            text = read_pdf_smart(path)
 
         elif ext == ".docx":
             text = read_docx(path)
 
         elif ext in [".xlsx", ".xls"]:
             text = read_excel(path)
+        elif ext in [".png", ".jpg", ".jpeg", ".webp", ".bmp"]:
+            text = read_diagram(path)
+        elif ext == ".drawio":
+            text = read_drawio(path)
 
         else:
             return

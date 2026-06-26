@@ -121,6 +121,12 @@
                         <div class="bubble">Hello! I am your Enterprise Knowledge Assistant. Ask me a question about your documents!</div>
                     </div>
                 </div>
+                <div class="chat-scope" style="margin-bottom:10px;display:flex;align-items:center;gap:8px;">
+                    <label for="file-select" style="font-size:0.9rem;opacity:0.8;">Answer from:</label>
+                    <select id="file-select" style="padding:6px 10px;border-radius:8px;background:#1e1e2e;color:#fff;border:1px solid #444;">
+                        <option value="">All files</option>
+                    </select>
+                </div>
                 <div class="chat-input-area">
                     <input type="text" id="chat-input" placeholder="Ask anything about company policies, sales, or history...">
                     <button id="send-btn" class="btn primary-btn">Send 🚀</button>
