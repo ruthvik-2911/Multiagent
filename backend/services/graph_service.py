@@ -21,6 +21,18 @@ def create_document(profile):
     run_query(query, profile)
     log_activity("Neo4j Updated", profile.get("file_name", "unknown"))
 
+def delete_document(file_name):
+    query = """
+    MATCH (d:Document {file_name:$file_name})
+    OPTIONAL MATCH (d)-[r:HAS_KEYWORD]->(k:Keyword)
+    DELETE r, d
+    WITH k
+    WHERE k IS NOT NULL AND NOT (k)<-[:HAS_KEYWORD]-()
+    DELETE k
+    """
+    run_query(query, {"file_name": file_name})
+    log_activity("Neo4j Deleted", file_name)
+
 def create_keyword(keyword):
     query = """
     MERGE (k:Keyword {name:$keyword})
@@ -41,7 +53,7 @@ def create_relationship(file_name, keyword):
 def search_keywords(question):
     query = """
     MATCH (d:Document)-[:HAS_KEYWORD]->(k:Keyword)
-    WHERE toLower(k.name) CONTAINS toLower($question)
+    WHERE size(k.name) > 2 AND (toLower($question) CONTAINS toLower(k.name) OR toLower(k.name) CONTAINS toLower($question))
     RETURN d.file_name AS file,
            collect(k.name) AS keywords
     """

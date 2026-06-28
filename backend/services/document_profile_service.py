@@ -42,3 +42,8 @@ def get_profile(file_name):
         if profile["file_name"] == file_name:
             return profile
     return None
+
+def delete_profile(file_name):
+    profiles = load_profiles()
+    profiles = [p for p in profiles if p["file_name"] != file_name]
+    save_profiles(profiles)

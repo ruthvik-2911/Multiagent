@@ -3,7 +3,7 @@ def compose(results):
     sources = []
     
     for result in results:
-        if result["status"] == "success":
+        if result.get("status") == "success":
             context += (
                 f"\n[{result['agent'].upper()}]\n"
                 f"{result['context']}\n"

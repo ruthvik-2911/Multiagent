@@ -1,140 +1,126 @@
 [
     {
-        "file_name": "sales.xlsx",
-        "display_name": "sales",
-        "summary": "The document presents a simple table analyzing product revenue, with rows representing individual products (Laptop, Mobile, and Tablet) and columns for the product name and revenue amount. The data suggests that Laptop generates the highest revenue at $100,000, followed by Mobile and Tablet, which generate $80,000 and $50,000 in revenue respectively.",
+        "file_name": "HR Anaytics.xlsx",
+        "display_name": "HR Anaytics",
+        "summary": "The provided document contains employee information, including ID, name, gender, date of birth, job title, salary, and performance score, for a group of 40 employees across various departments in an organization. The data covers aspects such as education, marital status, work experience, promotion history, and employment type, offering insights into the personnel management of the company.",
         "keywords": [
-            "Laptop",
-            "Revenue",
-            "Mobile",
-            "Tablet"
+            "Gender",
+            "JobTitle",
+            "Location",
+            "Education",
+            "SalaryINR"
         ],
-        "folder": "Analytics",
+        "folder": "Policies",
         "file_type": "xlsx",
+        "total_chunks": 501,
+        "indexed_at": "2026-06-28T15:44:30.367164"
+    },
+    {
+        "file_name": "Wild-Animals-Names-in-English.jpg",
+        "display_name": "Wild Animals Names in English",
+        "summary": "This document appears to be a list of wild animal names in English, extracted from an image file via optical character recognition (OCR) technology. The text consists of 32 entries, organized alphabetically by common name, with some variations in spelling and capitalization throughout the list.",
+        "keywords": [
+            "Lion",
+            "Wild",
+            "Animals",
+            "English",
+            "Names"
+        ],
+        "folder": "Policies",
+        "file_type": "jpg",
         "total_chunks": 1,
-        "indexed_at": "2026-06-25T21:24:58.544034"
+        "indexed_at": "2026-06-28T15:46:58.313956"
     },
     {
-        "file_name": "HISTORY-ENGLISH.pdf",
-        "display_name": "HISTORY ENGLISH",
-        "summary": "The document is a textbook for Class XII, focusing on Indian History, with themes in Part II rationalized for the 2023-24 academic year. The publication details include multiple reprints and revisions, as well as copyright information and office contact details, managed by the National Council of Educational Research and Training (NCERT).",
+        "file_name": "workflow_50_nodes.pdf",
+        "display_name": "workflow 50 nodes",
+        "summary": "This document outlines a workflow diagram that describes the process of managing incidents and issues in a technical environment. The workflow consists of multiple stages, including incident reporting, diagnosis, resolution, and post-incident review, with connections between nodes indicating conditional logic and decision-making points.",
         "keywords": [
-            "Indian History",
-            "National Curriculum Framework",
-            "Textbook",
-            "Syllabi",
-            "Learning"
-        ],
-        "folder": "Contracts",
-        "file_type": "pdf",
-        "total_chunks": 667,
-        "indexed_at": "2026-06-25T21:25:17.005476"
-    },
-    {
-        "file_name": "BAD601-module-3-pdf (1).pdf",
-        "display_name": "BAD601 module 3 pdf (1)",
-        "summary": "This document provides an introduction to MongoDB, a cross-platform, open-source, non-relational, distributed, and document-oriented database that addresses the challenges of traditional RDBMS in handling large volumes of data, rich variety of data types, and meeting scale requirements. The document also discusses the use of JavaScript Object Notation (JSON) as a data format for storing complex data structures and its advantages over XML in simple data exchange scenarios.",
-        "keywords": [
-            "Cross-platform",
-            "Non-relational",
-            "NoSQL",
-            "Distributed",
-            "Document-oriented"
-        ],
-        "folder": "Policies",
-        "file_type": "pdf",
-        "total_chunks": 157,
-        "indexed_at": "2026-06-25T21:26:20.186757"
-    },
-    {
-        "file_name": "Enterprise_Knowledge_Assistant_Platform.docx",
-        "display_name": "Enterprise Knowledge Assistant Platform",
-        "summary": "This document outlines a comprehensive technical blueprint for implementing an Enterprise Multi-Agent Knowledge Assistant Platform that leverages cutting-edge technologies such as Retrieval-Augmented Generation (RAG) and multi-agent AI orchestration to deliver accurate answers through a conversational chatbot interface. The platform can be deployed using either Microsoft's Azure services or open-source technologies, with the recommended approach depending on the organization's specific context, budget, and strategic direction.",
-        "keywords": [
-            "Enterprise",
-            "AI",
-            "Platform",
-            "Chatbot",
-            "Knowledge"
-        ],
-        "folder": "Policies",
-        "file_type": "docx",
-        "total_chunks": 10,
-        "indexed_at": "2026-06-25T21:27:19.506597"
-    },
-    {
-        "file_name": "Policy.docx",
-        "display_name": "Policy",
-        "summary": "The Company AI Usage Policy outlines the responsible use of artificial intelligence tools by all employees, emphasizing the importance of maintaining data privacy and confidentiality. Employees are prohibited from uploading confidential company data to public AI services, ensuring adherence to data protection regulations.",
-        "keywords": [
-            "AI",
-            "policy",
-            "responsible",
-            "data",
-            "privacy"
-        ],
-        "folder": "Policies",
-        "file_type": "docx",
-        "total_chunks": 1,
-        "indexed_at": "2026-06-25T21:27:35.622035"
-    },
-    {
-        "file_name": "ProgramsGenAI (2).docx",
-        "display_name": "ProgramsGenAI (2)",
-        "summary": "This document outlines three programs aimed at exploring and analyzing word vectors, with the first program focusing on using pre-trained models to understand word relationships and perform arithmetic operations, while the second program utilizes dimensionality reduction techniques like PCA or t-SNE to visualize word embeddings in a lower-dimensional space. The third program involves training a custom Word2Vec model on a small dataset to explore domain-specific word relationships and generate semantically similar words for input.",
-        "keywords": [
-            "word vectors",
-            "word embeddings",
-            "vector arithmetic"
-        ],
-        "folder": "Policies",
-        "file_type": "docx",
-        "total_chunks": 35,
-        "indexed_at": "2026-06-25T21:28:30.407593"
-    },
-    {
-        "file_name": "Ruthvik_resume_internship (3).pdf",
-        "display_name": "Ruthvik resume internship (3)",
-        "summary": "Ruthvik is a third-year B.E. Computer Science and Data Science student with expertise in Data Analytics, Artificial Intelligence, Machine Learning, and Full Stack Web Development, having completed projects such as AI-driven business intelligence for MSMEs and smart food donation platforms. He has demonstrated his skills through various academic achievements, hackathons, and job simulations, showcasing his proficiency in programming languages, frameworks, and tools.",
-        "keywords": [
-            "C",
-            "Python",
-            "Machine Learning",
-            "TensorFlow",
-            "JavaScript"
+            "on-call",
+            "workflow",
+            "incident"
         ],
         "folder": "Policies",
         "file_type": "pdf",
         "total_chunks": 7,
-        "indexed_at": "2026-06-25T21:29:30.599585"
+        "indexed_at": "2026-06-28T15:48:04.390075"
     },
     {
         "file_name": "sample1.txt",
-        "display_name": "Sample1",
-        "summary": "Project Alpha has successfully completed its first phase, with seamless integration of the new payment gateway, and is poised to move forward with phase 2 starting the following week. This update from Alice indicates a significant progress in the project's development and ongoing optimization efforts.",
+        "display_name": "sample1",
+        "summary": "Project Alpha has successfully completed phase 1, and the integration with the new payment gateway is functioning as expected. Phase 2 of the project is scheduled to commence the following week, marking an essential milestone in the overall initiative.",
         "keywords": [
-            "payment gateway",
-            "project alpha",
-            "phase 1",
-            "phase 2",
-            "integration"
+            "payment",
+            "gateway",
+            "project",
+            "alpha",
+            "phase"
         ],
-        "folder": "Inbox",
-        "file_type": "eml",
+        "folder": "emails",
+        "file_type": "txt",
         "total_chunks": 1,
-        "indexed_at": "2026-06-26T00:53:24.828517"
+        "indexed_at": "2026-06-28T15:48:32.958749"
     },
     {
         "file_name": "sample2.txt",
-        "display_name": "Sample2",
-        "summary": "A reminder to submit all Q2 deliverables by Friday evening, with a quarterly review meeting set for Monday at 10 AM. Team members are expected to meet this deadline to ensure a comprehensive review of their progress during the upcoming meeting.",
+        "display_name": "sample2",
+        "summary": "The document notifies the team that they must submit their Q2 deliverables by the end of this week's business day and that a quarterly review meeting has been scheduled for Monday at 10 AM. Charlie, the sender, requests the team to ensure timely submission of their deliverables to avoid any delays.",
         "keywords": [
-            "None",
-            "as there are no keywords in the document to extract. The document appears to be a simple email with only plain text."
+            "quarterly",
+            "review",
+            "submit",
+            "Q2",
+            "Friday"
         ],
-        "folder": "Inbox",
-        "file_type": "eml",
+        "folder": "emails",
+        "file_type": "txt",
         "total_chunks": 1,
-        "indexed_at": "2026-06-26T00:53:43.093849"
+        "indexed_at": "2026-06-28T15:48:53.749196"
+    },
+    {
+        "file_name": "sample3.txt",
+        "display_name": "sample3",
+        "summary": "An automated system test has been initiated for the newly integrated Watchdog FileSystemEventHandler, which will trigger processing of a specific file through the Outlook connector. The test aims to validate integration with the real-time activity dashboard via Server-Sent Events.",
+        "keywords": [
+            "watchdog",
+            "FileSystemEventHandler",
+            "AutomatedTest",
+            "Connector",
+            "Dashboard"
+        ],
+        "folder": "emails",
+        "file_type": "txt",
+        "total_chunks": 1,
+        "indexed_at": "2026-06-28T15:49:10.835841"
+    },
+    {
+        "file_name": "Enterprise_AI_Platform_Complete_Guide.docx",
+        "display_name": "Enterprise AI Platform Complete Guide",
+        "summary": "The Enterprise AI Knowledge Assistant Platform is a comprehensive project guide that outlines the architecture, tools, workflow, and reasoning behind each technology used to create an intelligent enterprise solution. The platform consists of multiple components, including Docker, Ollama, Open WebUI, Python/FastAPI, React UI, and various other technologies that work together to provide a seamless user experience and deliver expert-level responses to complex queries.",
+        "keywords": [
+            "Containerization",
+            "Offline API",
+            "Knowledge Graph"
+        ],
+        "folder": "Policies",
+        "file_type": "docx",
+        "total_chunks": 5,
+        "indexed_at": "2026-06-28T16:04:27.063162"
+    },
+    {
+        "file_name": "human-lineage-hominins-members-lineages-apes-interpretations.webp",
+        "display_name": "human lineage hominins members lineages apes interpretations",
+        "summary": "The document appears to be a text extraction from an image file, detailing various lineages of the human species and their relationships. The list includes Homo erectus, Homo Neanderthalensis, Homo habilis, and Homo sapiens, indicating a comprehensive categorization of hominin lineages.",
+        "keywords": [
+            "hominin",
+            "hominin-relationships",
+            "human-genetics",
+            "lineage-evolution",
+            "apes"
+        ],
+        "folder": "Policies",
+        "file_type": "webp",
+        "total_chunks": 1,
+        "indexed_at": "2026-06-28T16:07:51.095948"
     }
 ]

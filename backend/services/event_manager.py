@@ -5,7 +5,7 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from backend.connectors.connector_manager import get as get_connector
-from backend.services.indexer import index_enterprise_document
+from backend.services.indexer import index_enterprise_document, delete_enterprise_document
 
 # Import to trigger registration
 import backend.connectors.outlook_connector
@@ -26,15 +26,28 @@ class EnterpriseFileHandler(FileSystemEventHandler):
     def on_created(self, event):
         if not event.is_directory:
             filepath = event.src_path
-            task_queue.put(filepath)
+            task_queue.put(("created", filepath))
+            
+    def on_deleted(self, event):
+        if not event.is_directory:
+            filepath = event.src_path
+            task_queue.put(("deleted", filepath))
 
 def worker_loop():
     while True:
-        filepath = task_queue.get()
-        if filepath is None:
+        task = task_queue.get()
+        if task is None:
             break
             
+        action, filepath = task
+        
         try:
+            if action == "deleted":
+                filename = os.path.basename(filepath)
+                delete_enterprise_document(filename)
+                push_sse_event(f"🔴 Document Deleted: {filename}")
+                continue
+                
             print(f"\n[Event Manager] Detected new file: {filepath}")
             folder = os.path.basename(os.path.dirname(filepath))
             

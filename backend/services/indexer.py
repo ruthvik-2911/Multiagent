@@ -13,6 +13,8 @@ from backend.services.metadata_generator import generate_summary
 from backend.services.keyword_generator import generate_keywords
 from backend.services.document_profile_service import add_profile
 from backend.services.activity_service import log_activity
+from backend.services.graph_service import create_document, create_keyword, create_relationship
+from backend.services.profile_embedding_service import build_profile_embeddings
 
 def index_file(path):
     ext = os.path.splitext(path)[1].lower()
@@ -27,6 +29,9 @@ def index_file(path):
             text = read_diagram(path)
         elif ext == ".drawio":
             text = read_drawio(path)
+        elif ext == ".txt":
+            with open(path, "r", encoding="utf-8") as f:
+                text = f.read()
         else:
             return
 
@@ -67,6 +72,11 @@ def index_file(path):
         }
         add_profile(profile)
         
+        create_document(profile)
+        for keyword in keywords:
+            create_keyword(keyword)
+            create_relationship(file_name, keyword)
+        
         points = []
         
         for chunk_number, chunk in enumerate(chunks, start=1):
@@ -106,6 +116,9 @@ def index_file(path):
             points=points
         )
         print(f"Uploading...\nDone. INDEXED SUCCESSFULLY: {path} ({len(chunks)} chunks)")
+        
+        build_profile_embeddings()
+        
         log_activity("Qdrant Updated", file_name)
         log_activity("Document Indexed", file_name)
 
@@ -148,6 +161,11 @@ def index_enterprise_document(doc):
         }
         add_profile(profile)
         
+        create_document(profile)
+        for keyword in keywords:
+            create_keyword(keyword)
+            create_relationship(file_name, keyword)
+        
         points = []
         for chunk_number, chunk in enumerate(chunks, start=1):
             if not chunk.strip():
@@ -181,6 +199,9 @@ def index_enterprise_document(doc):
             points=points
         )
         print(f"Uploading...\nDone. INDEXED SUCCESSFULLY: {file_name} ({len(chunks)} chunks)")
+        
+        build_profile_embeddings()
+        
         log_activity("Qdrant Updated", file_name)
         log_activity(f"{doc.source.title()} Ingested", file_name)
         log_activity("Document Indexed", file_name)
@@ -189,3 +210,29 @@ def index_enterprise_document(doc):
         print(f"\nFAILED TO INDEX: {doc.title}")
         print(e)
         log_activity("Error occurred", doc.title if doc else "unknown", "Error")
+
+def delete_enterprise_document(file_name):
+    from backend.services.graph_service import delete_document
+    from backend.services.document_profile_service import delete_profile
+    from backend.services.profile_embedding_service import build_profile_embeddings
+    from backend.utils.dependencies import QDRANT_CLIENT, COLLECTION_NAME
+    from qdrant_client.http import models
+    from backend.services.activity_service import log_activity
+    
+    try:
+        print(f"\nDeleting {file_name} from all systems...")
+        delete_document(file_name)
+        delete_profile(file_name)
+        build_profile_embeddings()
+        
+        QDRANT_CLIENT.delete(
+            collection_name=COLLECTION_NAME,
+            points_selector=models.Filter(
+                must=[models.FieldCondition(key="file_name", match=models.MatchValue(value=file_name))]
+            )
+        )
+        log_activity("Document Deleted", file_name)
+        print(f"DELETED SUCCESSFULLY: {file_name}")
+    except Exception as e:
+        print(f"\nFAILED TO DELETE: {file_name}")
+        print(e)

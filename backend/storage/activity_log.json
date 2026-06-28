@@ -1,1 +1,2420 @@
-[]
+[
+  {
+    "timestamp": "2026-06-28T16:08:01.845840",
+    "event": "Supervisor Search",
+    "source": "3 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:07:54.589436",
+    "event": "Document Indexed",
+    "source": "human-lineage-hominins-members-lineages-apes-interpretations.webp",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:07:54.515114",
+    "event": "Qdrant Updated",
+    "source": "human-lineage-hominins-members-lineages-apes-interpretations.webp",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:07:51.168173",
+    "event": "Neo4j Updated",
+    "source": "human-lineage-hominins-members-lineages-apes-interpretations.webp",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:04:38.936229",
+    "event": "Supervisor Search",
+    "source": "10 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:04:32.572484",
+    "event": "Document Indexed",
+    "source": "Enterprise_AI_Platform_Complete_Guide.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:04:32.496641",
+    "event": "Qdrant Updated",
+    "source": "Enterprise_AI_Platform_Complete_Guide.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:04:27.466330",
+    "event": "Neo4j Updated",
+    "source": "Enterprise_AI_Platform_Complete_Guide.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:01:29.928481",
+    "event": "Supervisor Search",
+    "source": "10 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T16:00:37.354833",
+    "event": "Supervisor Search",
+    "source": "2 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:59:21.952971",
+    "event": "Supervisor Search",
+    "source": "10 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:57:35.285229",
+    "event": "Supervisor Search",
+    "source": "10 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:55:15.822401",
+    "event": "Supervisor Search",
+    "source": "10 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:53:33.913890",
+    "event": "Supervisor Search",
+    "source": "10 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:51:59.050001",
+    "event": "Supervisor Search",
+    "source": "9 chunks found",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:49:11.750910",
+    "event": "Document Indexed",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:49:11.718906",
+    "event": "Qdrant Updated",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:49:10.878859",
+    "event": "Neo4j Updated",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:54.424558",
+    "event": "Document Indexed",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:54.387342",
+    "event": "Qdrant Updated",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:53.809740",
+    "event": "Neo4j Updated",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:34.306518",
+    "event": "Document Indexed",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:34.264102",
+    "event": "Qdrant Updated",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:33.437768",
+    "event": "Neo4j Updated",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:05.645639",
+    "event": "Document Indexed",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:05.604830",
+    "event": "Qdrant Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:48:04.438110",
+    "event": "Neo4j Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:46:59.161511",
+    "event": "Document Indexed",
+    "source": "Wild-Animals-Names-in-English.jpg",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:46:59.122018",
+    "event": "Qdrant Updated",
+    "source": "Wild-Animals-Names-in-English.jpg",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:46:58.388801",
+    "event": "Neo4j Updated",
+    "source": "Wild-Animals-Names-in-English.jpg",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:46:19.441341",
+    "event": "Document Indexed",
+    "source": "HR Anaytics.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:46:19.401938",
+    "event": "Qdrant Updated",
+    "source": "HR Anaytics.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:44:31.038762",
+    "event": "Neo4j Updated",
+    "source": "HR Anaytics.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:36:10.423612",
+    "event": "Document Indexed",
+    "source": "Wild-Animals-Names-in-English.jpg",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:36:10.382931",
+    "event": "Qdrant Updated",
+    "source": "Wild-Animals-Names-in-English.jpg",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:36:08.103127",
+    "event": "Neo4j Updated",
+    "source": "Wild-Animals-Names-in-English.jpg",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:41.738290",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:41.488660",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:41.479577",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:40.868873",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:40.826440",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:40.825229",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:40.823578",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:40.822320",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:24:40.746035",
+    "event": "Planner Executed",
+    "source": "\"what happens if P1 critical i...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.740253",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.628807",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.558404",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.124168",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.083622",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.082431",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.080775",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.079555",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:15:50.022800",
+    "event": "Planner Executed",
+    "source": "\"what happens if P1 critical i...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:04:43.111967",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:04:42.987477",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:04:42.774088",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:04:42.773127",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:04:42.732788",
+    "event": "Planner Executed",
+    "source": "what is therre in hr analytics...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:04:12.435225",
+    "event": "Document Indexed",
+    "source": "HR Anaytics.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:04:12.368528",
+    "event": "Qdrant Updated",
+    "source": "HR Anaytics.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T15:01:55.688421",
+    "event": "Neo4j Updated",
+    "source": "HR Anaytics.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:56:09.783530",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:56:09.511951",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:56:09.446606",
+    "event": "Planner Executed",
+    "source": "what is there in enterprise ai...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:55:26.209984",
+    "event": "Document Indexed",
+    "source": "Enterprise_AI_Platform_Complete_Guide.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:55:26.161536",
+    "event": "Qdrant Updated",
+    "source": "Enterprise_AI_Platform_Complete_Guide.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:55:23.307769",
+    "event": "Neo4j Updated",
+    "source": "Enterprise_AI_Platform_Complete_Guide.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:52:12.141739",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:52:11.220150",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:52:11.170995",
+    "event": "Planner Executed",
+    "source": "what will happen if p1 critica...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:51:56.982408",
+    "event": "Document Indexed",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:51:56.919108",
+    "event": "Qdrant Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-28T14:51:53.208747",
+    "event": "Neo4j Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:54:00.974849",
+    "event": "Document Indexed",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:54:00.910126",
+    "event": "Qdrant Updated",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:53:59.319782",
+    "event": "Neo4j Updated",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:53:28.305786",
+    "event": "Document Indexed",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:53:28.247032",
+    "event": "Qdrant Updated",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:53:26.709179",
+    "event": "Neo4j Updated",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:52:59.166010",
+    "event": "Document Indexed",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:52:59.116222",
+    "event": "Qdrant Updated",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:52:56.818599",
+    "event": "Neo4j Updated",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:52:36.022486",
+    "event": "Document Indexed",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:52:35.971368",
+    "event": "Qdrant Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:52:32.717031",
+    "event": "Neo4j Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:51:14.576191",
+    "event": "Document Indexed",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:51:14.470486",
+    "event": "Qdrant Updated",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:51:05.023253",
+    "event": "Neo4j Updated",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:49:40.008224",
+    "event": "Document Indexed",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:49:39.854977",
+    "event": "Qdrant Updated",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:49:28.321118",
+    "event": "Neo4j Updated",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:45:48.172757",
+    "event": "Document Indexed",
+    "source": "Research_paper_of_mini_project[1][1].docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:45:48.134756",
+    "event": "Qdrant Updated",
+    "source": "Research_paper_of_mini_project[1][1].docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:45:41.831106",
+    "event": "Neo4j Updated",
+    "source": "Research_paper_of_mini_project[1][1].docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:44:40.331414",
+    "event": "Document Indexed",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:44:40.290492",
+    "event": "Qdrant Updated",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:44:39.225802",
+    "event": "Neo4j Updated",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:43:55.271869",
+    "event": "Document Indexed",
+    "source": "Oral Cancer Workflow.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:43:55.228964",
+    "event": "Qdrant Updated",
+    "source": "Oral Cancer Workflow.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:43:52.848622",
+    "event": "Neo4j Updated",
+    "source": "Oral Cancer Workflow.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:42:56.069763",
+    "event": "Document Indexed",
+    "source": "mmm.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:42:56.023147",
+    "event": "Qdrant Updated",
+    "source": "mmm.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:42:53.044908",
+    "event": "Neo4j Updated",
+    "source": "mmm.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:41:42.875907",
+    "event": "Document Indexed",
+    "source": "ppp.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:41:42.835442",
+    "event": "Qdrant Updated",
+    "source": "ppp.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:41:41.699236",
+    "event": "Neo4j Updated",
+    "source": "ppp.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:31:26.208139",
+    "event": "Document Indexed",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:31:26.156990",
+    "event": "Qdrant Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T23:31:10.028049",
+    "event": "Neo4j Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:47:41.720938",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:47:41.648566",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:47:41.416967",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:47:41.494630",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:47:41.413130",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:47:41.412012",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:47:41.380958",
+    "event": "Planner Executed",
+    "source": "explain ruthvik 2nd sem marks",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:43:04.420000",
+    "event": "Document Indexed",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:43:04.372227",
+    "event": "Qdrant Updated",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:43:02.273792",
+    "event": "Neo4j Updated",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:40:14.812782",
+    "event": "Document Deleted",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:40:14.023279",
+    "event": "Neo4j Deleted",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:30:20.744889",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:30:20.287084",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:30:19.974511",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:30:19.932003",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:30:19.930431",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:30:19.929228",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:30:19.893674",
+    "event": "Planner Executed",
+    "source": "explain ruthvik 2nd sem marks",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:29:07.739218",
+    "event": "Document Indexed",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:29:07.609102",
+    "event": "Qdrant Updated",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:28:59.813237",
+    "event": "Neo4j Updated",
+    "source": "ruthvik 2nd sem.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:27:13.592952",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:27:13.441195",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:27:13.399303",
+    "event": "Planner Executed",
+    "source": "which document having info of ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:26:27.958729",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:26:27.817821",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:26:27.603842",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:26:27.600552",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:26:27.565778",
+    "event": "Planner Executed",
+    "source": "explain about mmm document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:25:12.546952",
+    "event": "Document Indexed",
+    "source": "mmm.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:25:12.503153",
+    "event": "Qdrant Updated",
+    "source": "mmm.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:25:09.766234",
+    "event": "Neo4j Updated",
+    "source": "mmm.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:21:23.070309",
+    "event": "Planner Executed",
+    "source": "explain about mmm",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:19:48.920443",
+    "event": "Planner Executed",
+    "source": "which document having info of ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:19:17.856706",
+    "event": "Error occurred",
+    "source": "mmm.docx",
+    "status": "Error"
+  },
+  {
+    "timestamp": "2026-06-27T12:15:53.513249",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:15:53.332614",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:15:53.321530",
+    "event": "Planner Executed",
+    "source": "\"which documents having word p...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:12:40.932412",
+    "event": "Neo4j Updated",
+    "source": "Research_paper_of_mini_project[1][1].docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:10:35.950218",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:10:35.949209",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:10:35.756279",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:10:35.753787",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:10:35.724115",
+    "event": "Planner Executed",
+    "source": "what is there in ppp text",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:09:26.253163",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:09:26.139964",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:09:26.058816",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:09:26.057652",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:09:26.014907",
+    "event": "Planner Executed",
+    "source": "\"which documents having word p...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:07:46.952514",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:07:46.894937",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:07:46.690065",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:07:46.392453",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:07:46.388229",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:07:46.387257",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:07:46.347728",
+    "event": "Planner Executed",
+    "source": "explain oral cancer workflow",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:06:22.827415",
+    "event": "Document Indexed",
+    "source": "Oral Cancer Workflow.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:06:22.795591",
+    "event": "Qdrant Updated",
+    "source": "Oral Cancer Workflow.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:06:21.352869",
+    "event": "Neo4j Updated",
+    "source": "Oral Cancer Workflow.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:03:37.805860",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:03:37.641900",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:03:37.629822",
+    "event": "Planner Executed",
+    "source": "\"which documents having word p...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:02:18.367908",
+    "event": "Document Indexed",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:02:18.335905",
+    "event": "Qdrant Updated",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:02:17.701622",
+    "event": "Neo4j Updated",
+    "source": "sample3.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:02:00.250857",
+    "event": "Document Indexed",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:02:00.217329",
+    "event": "Qdrant Updated",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:01:59.440029",
+    "event": "Neo4j Updated",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:01:39.107123",
+    "event": "Document Indexed",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:01:39.075894",
+    "event": "Qdrant Updated",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:01:38.355235",
+    "event": "Neo4j Updated",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:01:18.825411",
+    "event": "Document Indexed",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:01:18.791895",
+    "event": "Qdrant Updated",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:01:18.160118",
+    "event": "Neo4j Updated",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:00:56.871307",
+    "event": "Document Indexed",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:00:56.836787",
+    "event": "Qdrant Updated",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:00:55.909261",
+    "event": "Neo4j Updated",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:00:20.839116",
+    "event": "Document Indexed",
+    "source": "ppp.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:00:20.800623",
+    "event": "Qdrant Updated",
+    "source": "ppp.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T12:00:19.960404",
+    "event": "Neo4j Updated",
+    "source": "ppp.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:57:02.932396",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:57:02.435551",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:57:02.404438",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:57:02.393618",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:57:02.336893",
+    "event": "Planner Executed",
+    "source": "explain about what and skills ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:54:51.163669",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:54:50.962281",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:54:50.947558",
+    "event": "Planner Executed",
+    "source": "which documents having word po...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:52:33.440007",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:52:33.362057",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:52:33.150137",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:52:33.150137",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:52:33.112624",
+    "event": "Planner Executed",
+    "source": "explain about ppp text",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:50:48.823863",
+    "event": "Agent Completed",
+    "source": "search agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:50:48.422486",
+    "event": "Supervisor Routed Request",
+    "source": "search",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:50:48.411079",
+    "event": "Planner Executed",
+    "source": "which documents having word po...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:43:32.423869",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:43:32.260968",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:43:32.184779",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:43:32.182974",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:43:32.159151",
+    "event": "Planner Executed",
+    "source": "which documents having word po...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:40:49.951973",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:40:49.791821",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:40:49.725834",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:40:49.724513",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:40:49.687056",
+    "event": "Planner Executed",
+    "source": "which documents having word po...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:39:48.200856",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:39:47.995012",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:39:47.964307",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:39:47.962465",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:39:47.925227",
+    "event": "Planner Executed",
+    "source": "explain about skills of ruthvi...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:39:24.658849",
+    "event": "Document Indexed",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:39:24.612438",
+    "event": "Qdrant Updated",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:39:23.766034",
+    "event": "Neo4j Updated",
+    "source": "ruthvik_trials  (2).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:37:43.549799",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:37:42.504475",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:37:42.272049",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:37:42.271412",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:37:42.234419",
+    "event": "Planner Executed",
+    "source": "explain about the powerbi repo...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:37:07.560482",
+    "event": "Document Indexed",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:37:07.453930",
+    "event": "Qdrant Updated",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-27T11:37:03.271622",
+    "event": "Neo4j Updated",
+    "source": "Power BI AI Chatbot Platform Report.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:59:27.186323",
+    "event": "Error occurred",
+    "source": "HISTORY-ENGLISH.pdf",
+    "status": "Error"
+  },
+  {
+    "timestamp": "2026-06-26T13:57:02.316868",
+    "event": "Neo4j Updated",
+    "source": "HISTORY-ENGLISH.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:55:51.922440",
+    "event": "Error occurred",
+    "source": "dummy.pdf",
+    "status": "Error"
+  },
+  {
+    "timestamp": "2026-06-26T13:55:51.885396",
+    "event": "Document Indexed",
+    "source": "sales.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:55:51.877880",
+    "event": "Qdrant Updated",
+    "source": "sales.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:55:50.567217",
+    "event": "Neo4j Updated",
+    "source": "sales.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:48:46.436508",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:48:46.383807",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:48:46.288111",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:48:46.165545",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:48:46.165002",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:48:46.163834",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:48:46.155530",
+    "event": "Planner Executed",
+    "source": "explain ruthvik resume",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:44:36.581151",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:44:36.237371",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:44:35.992488",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:44:35.991941",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:44:35.982279",
+    "event": "Planner Executed",
+    "source": "what will happen if issue was ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:43:31.842820",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:43:31.302180",
+    "event": "Agent Completed",
+    "source": "analytics agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:43:31.231591",
+    "event": "Supervisor Routed Request",
+    "source": "analytics",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:43:31.230362",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:43:31.218673",
+    "event": "Planner Executed",
+    "source": "\"explain about sales.xlsx\"",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:37:53.899498",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:37:53.512847",
+    "event": "Agent Completed",
+    "source": "analytics agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:37:53.459487",
+    "event": "Supervisor Routed Request",
+    "source": "analytics",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:37:53.458500",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:37:53.427463",
+    "event": "Planner Executed",
+    "source": "\"explain about sales.xlsx\"",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:07:18.182907",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:07:18.089659",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:07:18.059580",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:07:18.057211",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T13:07:18.044628",
+    "event": "Planner Executed",
+    "source": "ok explain about sales.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:54:54.688490",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:54:54.562243",
+    "event": "Agent Completed",
+    "source": "analytics agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:54:54.518421",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:54:54.460987",
+    "event": "Supervisor Routed Request",
+    "source": "analytics",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:54:54.459898",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:54:54.458787",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:54:54.448808",
+    "event": "Planner Executed",
+    "source": "what will happen if issue was ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:53:06.936486",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:53:06.693239",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:53:06.610400",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:53:06.608508",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:53:06.598262",
+    "event": "Planner Executed",
+    "source": "\"explain about work flow of 50...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:46:33.088826",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:46:33.039421",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:46:32.961696",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:46:32.960642",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:46:32.952449",
+    "event": "Planner Executed",
+    "source": "explain about work flow of 50 ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:45:54.734034",
+    "event": "Document Indexed",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:45:54.697921",
+    "event": "Qdrant Updated",
+    "source": "workflow_50_nodes.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.945745",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.888823",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.838436",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.820420",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.720073",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.716130",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.713031",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.710691",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:43:36.700498",
+    "event": "Planner Executed",
+    "source": "\"Find other documents that sha...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:42.961597",
+    "event": "Neo4j Updated",
+    "source": "teammate_resume",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:42.651197",
+    "event": "Neo4j Updated",
+    "source": "BAD601-module-3-pdf (1).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:42.394816",
+    "event": "Neo4j Updated",
+    "source": "HISTORY-ENGLISH.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:41.917733",
+    "event": "Neo4j Updated",
+    "source": "sales.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:41.424600",
+    "event": "Neo4j Updated",
+    "source": "sample2.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:41.083416",
+    "event": "Neo4j Updated",
+    "source": "sample1.txt",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:40.483768",
+    "event": "Neo4j Updated",
+    "source": "Ruthvik_resume_internship (3).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:40.364087",
+    "event": "Neo4j Updated",
+    "source": "ProgramsGenAI (2).docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:39.886665",
+    "event": "Neo4j Updated",
+    "source": "Policy.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:42:39.007129",
+    "event": "Neo4j Updated",
+    "source": "Enterprise_Knowledge_Assistant_Platform.docx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:40:51.358561",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:40:50.631368",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:40:50.292212",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:40:50.290334",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:40:50.280676",
+    "event": "Planner Executed",
+    "source": "Find other documents that shar...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:37:03.603572",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:37:03.504143",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:37:03.389206",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:37:03.386681",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:37:03.373489",
+    "event": "Planner Executed",
+    "source": "\"Analyze Ruthvik's resume and ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:36:57.463739",
+    "event": "Document Indexed",
+    "source": "teammate_resume",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:36:57.427088",
+    "event": "Teammate_Resume.Txt Ingested",
+    "source": "teammate_resume",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:36:57.420782",
+    "event": "Qdrant Updated",
+    "source": "teammate_resume",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.381567",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.305216",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.225536",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.225536",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.128273",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.124438",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.121799",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.119022",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:35:29.110211",
+    "event": "Planner Executed",
+    "source": "\"Analyze Ruthvik's resume and ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:33:52.910664",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:33:50.691065",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:33:50.599318",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:33:50.412827",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:33:50.408951",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:33:50.406385",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:33:50.394939",
+    "event": "Planner Executed",
+    "source": "Analyze Ruthvik's resume and t...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:32:38.341609",
+    "event": "Document Indexed",
+    "source": "BAD601-module-3-pdf (1).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:32:38.336610",
+    "event": "Qdrant Updated",
+    "source": "BAD601-module-3-pdf (1).pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:31:27.155692",
+    "event": "Document Indexed",
+    "source": "HISTORY-ENGLISH.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:31:27.151692",
+    "event": "Qdrant Updated",
+    "source": "HISTORY-ENGLISH.pdf",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:30:14.234528",
+    "event": "Error occurred",
+    "source": "dummy.pdf",
+    "status": "Error"
+  },
+  {
+    "timestamp": "2026-06-26T12:30:14.207712",
+    "event": "Document Indexed",
+    "source": "sales.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:30:14.202710",
+    "event": "Qdrant Updated",
+    "source": "sales.xlsx",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.946495",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.913451",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.835160",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.755105",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.690155",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.688368",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.687196",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.683404",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:26:15.673667",
+    "event": "Planner Executed",
+    "source": "\"Analyze Ruthvik's resume and ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:19:20.482100",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:19:20.351062",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:19:20.230124",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:19:20.206833",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:19:20.201647",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:19:20.196958",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:19:20.186228",
+    "event": "Planner Executed",
+    "source": "\"Analyze Ruthvik's resume and ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:18:11.226850",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:18:11.119884",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:18:11.087359",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:18:11.086254",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:18:11.078477",
+    "event": "Planner Executed",
+    "source": "\"When are the Q2 deliverables ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:16:14.953144",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:16:14.883708",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:16:14.826579",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:16:14.825440",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:16:14.818229",
+    "event": "Planner Executed",
+    "source": "\"What documents mention AI or ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:14:37.571892",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:14:37.558285",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:14:37.365648",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:14:37.363799",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:14:37.356162",
+    "event": "Planner Executed",
+    "source": "\"Explain the word vector progr...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:08:16.274021",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:08:16.172292",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:08:16.110342",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:08:16.058460",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:08:16.057308",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:08:16.057308",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:08:16.050590",
+    "event": "Planner Executed",
+    "source": "explain about the programs of ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:06:47.611815",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:06:47.521525",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:06:47.506709",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:06:47.321920",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:06:47.319752",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:06:47.318491",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:06:47.312190",
+    "event": "Planner Executed",
+    "source": "what and all documents related...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:05:33.699845",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:05:33.010716",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:05:32.980630",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:05:32.978544",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:05:32.971369",
+    "event": "Planner Executed",
+    "source": "explain about skills of ruthvi...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:02:25.955916",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:02:25.869972",
+    "event": "Agent Completed",
+    "source": "memory agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:02:25.784669",
+    "event": "Supervisor Routed Request",
+    "source": "memory",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:02:25.783400",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:02:25.782229",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:02:25.773266",
+    "event": "Planner Executed",
+    "source": "please explain skills of ruthv...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:01:46.253994",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T12:01:46.246276",
+    "event": "Planner Executed",
+    "source": "hey explain about what skills ...",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T11:58:43.468851",
+    "event": "Agent Completed",
+    "source": "graph agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T11:58:38.383690",
+    "event": "Agent Completed",
+    "source": "document agent",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T11:58:37.972072",
+    "event": "Supervisor Routed Request",
+    "source": "graph",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T11:58:37.970973",
+    "event": "Supervisor Routed Request",
+    "source": "document",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2026-06-26T11:58:37.962789",
+    "event": "Planner Executed",
+    "source": "hey please explain resume pdf",
+    "status": "Success"
+  }
+]

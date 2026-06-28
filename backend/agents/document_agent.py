@@ -2,6 +2,8 @@ from backend.services.document_profile_service import get_profile
 from backend.services.profile_embedding_service import find_best_profile
 from backend.services.memory_service import get_memory, set_memory
 from backend.agents.registry import register
+from backend.utils.dependencies import EMBEDDING_MODEL, QDRANT_CLIENT, COLLECTION_NAME
+from qdrant_client.http import models
 
 FOLLOW_UP_WORDS = [
     "it",
@@ -31,12 +33,18 @@ def run(question: str, context: dict) -> dict:
         profile = get_profile(document)
     else:
         document, confidence = find_best_profile(question)
+        
+        if document and document.lower() in question.lower():
+            confidence += 0.5
+            print(f"\n[Enterprise AI Resolver] Exact filename match! Boosting confidence -> {confidence:.3f}")
+            
         print(f"\n[Enterprise AI Resolver] Smartly Detected Target Document: {document} (Confidence: {confidence:.3f})")
         
-        if confidence < 0.35:
+        if confidence < 0.25:
             return {
-                "question": question,
-                "answer": "I couldn't confidently identify a relevant document. Could you please provide more details?",
+                "agent": "document",
+                "status": "failed",
+                "context": "I couldn't confidently identify a relevant document.",
                 "confidence": round(confidence, 3),
                 "sources": []
             }
@@ -75,8 +83,9 @@ def run(question: str, context: dict) -> dict:
 
     if not results.points:
         return {
-            "question": question,
-            "answer": "I couldn't find relevant context in the documents.",
+            "agent": "document",
+            "status": "failed",
+            "context": "I couldn't find relevant context in the documents.",
             "sources": []
         }
 
@@ -84,7 +93,7 @@ def run(question: str, context: dict) -> dict:
     sources = []
     
     for point in results.points:
-        if point.score < 0.20:
+        if point.score < 0.05:
             continue
             
         payload = point.payload

@@ -10,10 +10,11 @@ def create_plan(question):
 You are an Enterprise AI Planner.
 
 Available agents:
-- document (For general document queries, reading content, policy details, summaries)
+- document (For general document queries, reading content, policy details, summaries of ONE specific document)
 - graph (For finding relationships, connections, and keyword overlaps between documents)
 - analytics (For financial data, sales, quantitative analysis)
 - memory (For follow-up questions referencing previous conversation)
+- search (For global searches across ALL documents simultaneously, e.g. "which documents have...", "find all mentions of...")
 
 Create an execution plan by breaking the question into sub-tasks for the agents.
 Return ONLY valid JSON format. Do not return any other text.
@@ -51,6 +52,8 @@ Question:
         if text.endswith("```"):
             text = text[:-3]
         plan = json.loads(text.strip())
+        if not plan.get("tasks"):
+            plan["tasks"] = [{"agent": "search", "task": question}]
         log_activity("Planner Executed", question[:30] + "..." if len(question) > 30 else question)
         return plan
     except Exception as e:

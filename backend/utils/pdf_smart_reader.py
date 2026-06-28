@@ -140,14 +140,39 @@ def _reconstruct_page(page, page_no):
             lbl = nearest_edge_label(mid) or ""
             edges.add((na["label"], lbl, nb["label"]))
 
-    out = [f"=== PAGE {page_no} ===", "NODES:"]
+    out = [f"=== PAGE {page_no} ==="]
+
+    # Produce BOTH structured AND natural language descriptions
+    # so semantic search can match user questions in natural language.
+
+    out.append("NODES IN THIS WORKFLOW:")
     for n in nodes:
         out.append(f'- "{n["label"]}"')
     out.append("")
-    out.append("CONNECTIONS (reconstructed from geometry; direction approximate):")
+
+    out.append("CONNECTIONS:")
     for a, lbl, b in sorted(edges):
-        tag = f"[{lbl}]" if lbl else "[]"
-        out.append(f'- "{a}" --{tag}--> "{b}"')
+        if lbl:
+            # Decision branch: "If P1 critical? is No, then Add to standard queue"
+            out.append(f'- If "{a}" is {lbl}, then go to "{b}"')
+        else:
+            out.append(f'- "{a}" connects to "{b}"')
+    out.append("")
+
+    # Produce a natural language summary of decision nodes
+    decisions = {}
+    for a, lbl, b in edges:
+        if lbl:
+            if a not in decisions:
+                decisions[a] = []
+            decisions[a].append((lbl, b))
+
+    if decisions:
+        out.append("DECISION POINTS:")
+        for node, branches in decisions.items():
+            branch_text = "; ".join(f"if {lbl} then {target}" for lbl, target in branches)
+            out.append(f'- At "{node}": {branch_text}')
+
     return "\n".join(out)
 
 
@@ -158,8 +183,29 @@ def read_pdf_smart(path):
         for it in d["items"] if it[0] == "l"
     )
     text = _pypdf_text(path)
+    text_len = len(text.strip())
 
-    if total_lines >= MIN_LINES_FOR_DIAGRAM:
+    # Count extractable words via fitz (more reliable than pypdf for scans)
+    total_fitz_words = sum(len(page.get_text("words")) for page in doc)
+
+    # Words-per-line ratio helps distinguish diagram PDFs from styled documents:
+    #   - Vector diagram (workflow_50_nodes.pdf): 97 lines, 146 words → 1.5 words/line
+    #   - Styled resume (ruthvik_trials.pdf):   3294 lines, 319 words → 0.1 words/line (decorative)
+    #   - Scanned marks card:                   8658 lines, 0 words   → 0 words/line
+    # A TRUE diagram has connector lines with text labels inside shapes.
+    # A styled document has tons of decorative lines but mostly running text.
+    words_per_line = total_fitz_words / max(total_lines, 1)
+
+    print(f"[PDF Smart Reader] {path}: lines={total_lines}, fitz_words={total_fitz_words}, "
+          f"text_chars={text_len}, words_per_line={words_per_line:.2f}")
+
+    # PRIORITY 1: Vector diagram detection.
+    # A true diagram has: enough lines (≥8), some text labels (≥20 words),
+    # and a reasonable words-per-line ratio (≥0.5 = lines are connectors, not decoration).
+    if (total_lines >= MIN_LINES_FOR_DIAGRAM 
+            and total_fitz_words >= 20 
+            and words_per_line >= 0.5):
+        print(f"[PDF Smart Reader] Vector diagram PDF -> reconstructing structure")
         header = [
             "WORKFLOW DIAGRAM PDF (structure reconstructed from vector geometry)",
             f"SOURCE FILE: {path}",
@@ -170,11 +216,16 @@ def read_pdf_smart(path):
         body = [_reconstruct_page(page, i) for i, page in enumerate(doc, 1)]
         return "\n".join(header) + "\n\n".join(body)
 
-    if len(text.strip()) >= TEXT_THRESHOLD:
+    # PRIORITY 2: Text-rich PDF (resumes, reports, styled documents).
+    if text_len >= TEXT_THRESHOLD:
+        print(f"[PDF Smart Reader] Text-rich PDF ({text_len} chars) -> using text extraction")
         return text
 
-    from backend.utils.pdf_diagram_reader import read_pdf_diagram
-    return read_pdf_diagram(path)
+    # PRIORITY 3: Scanned/image-based PDF (no text, possibly has table borders).
+    # Use OCR to read the text from rendered images.
+    print(f"[PDF Smart Reader] Scanned/image PDF -> using OCR")
+    from backend.utils.pdf_ocr_reader import read_pdf_ocr
+    return read_pdf_ocr(path)
 
 
 if __name__ == "__main__":
