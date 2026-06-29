@@ -3,6 +3,7 @@ from backend.connectors.base_connector import BaseConnector
 from backend.models.document import EnterpriseDocument
 from backend.connectors.connector_manager import register
 from backend.services.indexer import index_enterprise_document
+from backend.utils.email_parser import parse_email, to_indexable_text
 
 class OutlookConnector(BaseConnector):
     def __init__(self, folder_path="emails"):
@@ -27,14 +28,22 @@ class OutlookConnector(BaseConnector):
 
     def transform(self, item):
         filename = item["filename"]
-        content = item["content"]
-        title = filename.replace(".txt", "").replace(".eml", "").replace("_", " ").title()
-        
+        parsed = parse_email(item["content"])
+
         return EnterpriseDocument(
             source="outlook",
-            title=title,
-            content=content,
-            metadata={"file_name": filename, "folder": "Inbox", "file_type": "eml"}
+            title=parsed["subject"],
+            content=to_indexable_text(parsed),
+            metadata={
+                "file_name": filename,
+                "folder": "Inbox",
+                "file_type": "eml",
+                "subject": parsed["subject"],
+                "from_email": parsed["from_email"],
+                "from_name": parsed["from_name"],
+                "to": parsed["to"],
+                "date": parsed["date"],
+            }
         )
 
     def index(self, doc: EnterpriseDocument):

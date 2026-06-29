@@ -15,7 +15,7 @@ Available agents:
 - analytics (For financial data, sales, quantitative analysis)
 - memory (For follow-up questions referencing previous conversation)
 - search (For global searches across ALL documents simultaneously, e.g. "which documents have...", "find all mentions of...")
-
+- email (For questions about emails, the inbox, messages, senders, or "who emailed about X", "summarize my emails")
 Create an execution plan by breaking the question into sub-tasks for the agents.
 Return ONLY valid JSON format. Do not return any other text.
 

@@ -11,7 +11,7 @@ This eliminates the planner Ollama call and multiple agent overhead,
 cutting response time roughly in half.
 """
 
-from backend.agents import document_agent, graph_agent, analytics_agent, memory_agent, search_agent
+from backend.agents import document_agent, graph_agent, analytics_agent, memory_agent, email_agent
 from backend.agents.registry import get_agent
 from backend.services.activity_service import log_activity
 import requests
