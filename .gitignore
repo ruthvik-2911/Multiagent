@@ -7,3 +7,7 @@ data/*
 uploads/*
 !uploads/.gitkeep
 .env
+
+backend/storage/activity_log.json
+backend/storage/document_profiles.json
+backend/storage/profile_embeddings.json
