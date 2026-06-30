@@ -14,7 +14,7 @@ def load_profiles():
 
 
 def save_profiles(profiles):
-
+    os.makedirs(os.path.dirname(PROFILE_FILE), exist_ok=True)
     with open(PROFILE_FILE, "w", encoding="utf-8") as f:
         json.dump(
             profiles,

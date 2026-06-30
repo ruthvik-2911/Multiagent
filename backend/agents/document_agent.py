@@ -26,94 +26,124 @@ def run(question: str, context: dict) -> dict:
             is_follow_up = True
             break
             
+    best_doc = None
+    profile = None
+    confidence = 0.0
+    
     if is_follow_up and memory:
-        document = memory["document"]
+        best_doc = memory["document"]
         confidence = 1.0
-        print(f"\n[Enterprise AI Resolver] Using Remembered Document: {document}")
-        profile = get_profile(document)
+        print(f"\n[Enterprise AI Resolver] Using Remembered Document: {best_doc}")
+        profile = get_profile(best_doc)
     else:
-        document, confidence = find_best_profile(question)
-        
-        if document and document.lower() in question.lower():
+        best_doc, confidence = find_best_profile(question)
+        if best_doc and best_doc.lower() in question.lower():
             confidence += 0.5
             print(f"\n[Enterprise AI Resolver] Exact filename match! Boosting confidence -> {confidence:.3f}")
             
-        print(f"\n[Enterprise AI Resolver] Smartly Detected Target Document: {document} (Confidence: {confidence:.3f})")
+        print(f"\n[Enterprise AI Resolver] Best Profile Match: {best_doc} (Confidence: {confidence:.3f})")
         
-        if confidence < 0.25:
-            return {
-                "agent": "document",
-                "status": "failed",
-                "context": "I couldn't confidently identify a relevant document.",
-                "confidence": round(confidence, 3),
-                "sources": []
-            }
-            
-        profile = get_profile(document)
+        profile = get_profile(best_doc) if best_doc else None
         
-        if profile:
+        if profile and confidence >= 0.40:
             set_memory(session_id, {
-                "document": document,
+                "document": best_doc,
                 "summary": profile["summary"],
                 "keywords": profile["keywords"]
             })
     
+    # ── HYBRID GLOBAL SEARCH ──────────────────────────────────────────
     qdrant_query_text = question
-    llm_question = question
     if is_follow_up and profile:
         qdrant_query_text = " ".join(profile["keywords"])
-        display_name = profile.get("display_name", document)
-        llm_question = f"{question} regarding {display_name}"
     
     question_embedding = EMBEDDING_MODEL.encode(qdrant_query_text).tolist()
-
-    results = QDRANT_CLIENT.query_points(
+    
+    # A) Semantic search across ALL chunks
+    semantic_results = QDRANT_CLIENT.query_points(
         collection_name=COLLECTION_NAME,
         query=question_embedding,
-        limit=5,
-        query_filter=models.Filter(
-            must=[
-                models.FieldCondition(
-                    key="file_name",
-                    match=models.MatchValue(value=document)
-                )
-            ]
-        )
+        limit=10,
     )
+    
+    # B) Document-specific chunks if confidence is high
+    doc_chunks = []
+    if best_doc and confidence >= 0.40:
+        doc_results = QDRANT_CLIENT.query_points(
+            collection_name=COLLECTION_NAME,
+            query=question_embedding,
+            limit=10,
+            query_filter=models.Filter(
+                must=[
+                    models.FieldCondition(
+                        key="file_name",
+                        match=models.MatchValue(value=best_doc)
+                    )
+                ]
+            )
+        )
+        doc_chunks = doc_results.points
 
-    if not results.points:
-        return {
-            "agent": "document",
-            "status": "failed",
-            "context": "I couldn't find relevant context in the documents.",
-            "sources": []
-        }
-
-    contexts = []
+    # C) Keyword search across ALL chunks
+    question_words = [w for w in question.lower().split() if len(w) > 2]
+    keyword_results = QDRANT_CLIENT.scroll(
+        collection_name=COLLECTION_NAME,
+        limit=100,
+        with_payload=True,
+        with_vectors=False,
+    )[0]
+    
+    keyword_chunks = []
+    for point in keyword_results:
+        content_lower = point.payload.get("content", "").lower()
+        matches = sum(1 for w in question_words if w in content_lower)
+        if matches >= 2:
+            keyword_chunks.append((point, matches))
+            
+    keyword_chunks.sort(key=lambda x: x[1], reverse=True)
+    keyword_chunks = [p for p, _ in keyword_chunks[:10]]
+    
+    # ── MERGE RESULTS ───────────────────────────────────────────────
+    seen_ids = set()
+    merged_contexts = []
     sources = []
     
-    for point in results.points:
-        if point.score < 0.05:
-            continue
-            
+    def add_chunk(point):
+        pid = point.id if hasattr(point, 'id') else id(point)
+        if pid in seen_ids:
+            return
+        seen_ids.add(pid)
         payload = point.payload
-        contexts.append(payload.get("content", ""))
-        
-        sources.append({
-            "file_name": payload.get("file_name", "Unknown"),
-            "chunk_number": payload.get("chunk_number", "Unknown")
-        })
-        
-    if not contexts:
+        content = payload.get("content", "")
+        file_name = payload.get("file_name", "Unknown")
+        if content.strip():
+            merged_contexts.append(f"--- From Document: {file_name} ---\n{content}")
+            sources.append({
+                "file_name": file_name,
+                "chunk_number": payload.get("chunk_number", "?")
+            })
+
+    # Add in priority order
+    for p in doc_chunks:
+        add_chunk(p)
+    for p in keyword_chunks:
+        add_chunk(p)
+    for p in semantic_results.points:
+        if p.score >= 0.15:
+            add_chunk(p)
+            
+    merged_contexts = merged_contexts[:10]
+    
+    if not merged_contexts:
         return {
             "agent": "document",
             "status": "failed",
-            "context": "I couldn't find highly relevant information in the documents.",
+            "context": "I couldn't find relevant context in any documents.",
             "sources": [],
             "confidence": round(confidence, 3)
         }
-        
-    vector_context = "\n\n".join(contexts)
+
+    vector_context = "\n\n".join(merged_contexts)
 
     return {
         "agent": "document",
@@ -121,7 +151,7 @@ def run(question: str, context: dict) -> dict:
         "context": vector_context,
         "sources": sources,
         "confidence": round(confidence, 3),
-        "selected_document": document,
+        "selected_document": best_doc if confidence >= 0.40 else None,
         "summary": profile["summary"] if profile else "",
         "keywords": profile["keywords"] if profile else []
     }

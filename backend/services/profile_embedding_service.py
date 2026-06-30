@@ -24,19 +24,28 @@ def build_profile_embeddings():
             "embedding": embedding
         })
         
+    os.makedirs(os.path.dirname(PROFILE_VECTOR_FILE), exist_ok=True)
     with open(PROFILE_VECTOR_FILE, "w") as f:
         json.dump(vectors, f)
 
 def find_best_profile(question):
+    if not os.path.exists(PROFILE_VECTOR_FILE):
+        return None, 0.0
+        
     with open(PROFILE_VECTOR_FILE, "r", encoding="utf-8") as f:
         vectors = json.load(f)
 
+    if not vectors:
+        return None, 0.0
+
     question_embedding = EMBEDDING_MODEL.encode(question)
+    question_lower = question.lower()
 
     best_score = -1
     best_document = None
 
     for item in vectors:
+        file_name = item["file_name"]
         profile_embedding = np.array(item["embedding"])
 
         similarity = np.dot(
@@ -47,9 +56,17 @@ def find_best_profile(question):
             *
             np.linalg.norm(profile_embedding)
         )
+        
+        # Boost for exact filename or keyword matches in the query
+        if file_name.lower() in question_lower:
+            similarity += 0.3
+            
+        # Optional: check if "email" is in question, slightly boost email profiles, etc.
+        if "email" in question_lower and "eml" in file_name.lower():
+            similarity += 0.1
 
         if similarity > best_score:
             best_score = similarity
-            best_document = item["file_name"]
+            best_document = file_name
 
     return best_document, float(best_score)

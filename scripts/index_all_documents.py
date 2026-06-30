@@ -28,9 +28,11 @@ print("Wiping Neo4j Graph...")
 run_query("MATCH (n) DETACH DELETE n")
 
 print("Wiping JSON Profiles...")
+os.makedirs(os.path.dirname(PROFILE_FILE), exist_ok=True)
 with open(PROFILE_FILE, "w", encoding="utf-8") as f:
     json.dump([], f)
     
+os.makedirs(os.path.dirname(PROFILE_VECTOR_FILE), exist_ok=True)
 with open(PROFILE_VECTOR_FILE, "w", encoding="utf-8") as f:
     json.dump([], f)
 

@@ -28,10 +28,14 @@ def run(question: str, context: dict) -> dict:
             query=embedding,
             limit=8,
             query_filter=models.Filter(
-                must=[
+                should=[
                     models.FieldCondition(
                         key="file_type",
                         match=models.MatchValue(value="eml"),
+                    ),
+                    models.FieldCondition(
+                        key="source_folder",
+                        match=models.MatchValue(value="emails"),
                     )
                 ]
             ),

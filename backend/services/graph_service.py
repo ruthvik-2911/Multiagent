@@ -1,14 +1,25 @@
 from neo4j import GraphDatabase
 from backend.services.activity_service import log_activity
 
-driver = GraphDatabase.driver(
-    "bolt://localhost:7687",
-    auth=("neo4j", "password")
-)
+import logging
+
+try:
+    driver = GraphDatabase.driver(
+        "bolt://localhost:7687",
+        auth=("neo4j", "password")
+    )
+except Exception as e:
+    logging.warning(f"Neo4j driver initialization failed: {e}")
+    driver = None
 
 def run_query(query, parameters=None):
-    with driver.session() as session:
-        session.run(query, parameters or {})
+    if not driver:
+        return
+    try:
+        with driver.session() as session:
+            session.run(query, parameters or {})
+    except Exception as e:
+        logging.warning(f"Neo4j query failed (Neo4j may be offline): {e}")
 
 def create_document(profile):
     query = """
@@ -51,15 +62,21 @@ def create_relationship(file_name, keyword):
     })
 
 def search_keywords(question):
+    if not driver:
+        return []
     query = """
     MATCH (d:Document)-[:HAS_KEYWORD]->(k:Keyword)
     WHERE size(k.name) > 2 AND (toLower($question) CONTAINS toLower(k.name) OR toLower(k.name) CONTAINS toLower($question))
     RETURN d.file_name AS file,
            collect(k.name) AS keywords
     """
-    with driver.session() as session:
-        result = session.run(
-            query,
-            {"question": question}
-        )
-        return result.data()
+    try:
+        with driver.session() as session:
+            result = session.run(
+                query,
+                {"question": question}
+            )
+            return result.data()
+    except Exception as e:
+        logging.warning(f"Neo4j search_keywords failed: {e}")
+        return []

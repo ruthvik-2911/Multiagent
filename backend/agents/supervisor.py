@@ -43,7 +43,7 @@ def run(question: str, context: dict):
 
     # C) If we have a good profile match, also pull chunks from that specific document
     doc_chunks = []
-    if best_doc and profile_score >= 0.25:
+    if best_doc and profile_score >= 0.40:
         doc_results = QDRANT_CLIENT.query_points(
             collection_name=COLLECTION_NAME,
             query=question_embedding,
@@ -160,7 +160,7 @@ Instructions:
     return {
         "question": question,
         "answer": answer,
-        "selected_document": best_doc if profile_score >= 0.25 else None,
+        "selected_document": best_doc if profile_score >= 0.40 else None,
         "confidence": round(profile_score, 3) if best_doc else 0.0,
         "summary": profile["summary"] if profile else "",
         "keywords": profile["keywords"] if profile else [],
