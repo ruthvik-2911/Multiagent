@@ -36,7 +36,7 @@ def router_node(state: AgentState):
     # Simple heuristic router for speed and reliability, falling back to LLM if needed
     if any(w in question for w in ["email", "inbox", "message", "send", "mail"]):
         agent = "email"
-    elif any(w in question for w in ["chart", "analytics", "data", "dataset", "excel", "csv"]):
+    elif any(w in question for w in ["chart", "analytics", "data", "dataset", "excel", "csv", "powerbi", "pbix", "dashboard", "table", "average", "total", "sum", "top", "bottom", "sku", "price", "inventory", "stock", "orders"]):
         agent = "analytics"
     elif any(w in question for w in ["graph", "node", "connection", "relationship", "dependency", "neo4j"]):
         agent = "graph"

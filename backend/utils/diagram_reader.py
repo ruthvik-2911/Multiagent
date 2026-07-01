@@ -45,13 +45,13 @@ def read_diagram(path: str) -> str:
             continue
         y = round(bbox[0][1] / 15)
         if y != current_y and current_line:
-            lines.append(" ".join(current_line))
+            lines.append(", ".join(current_line))
             current_line = []
         current_y = y
         current_line.append(text)
 
     if current_line:
-        lines.append(" ".join(current_line))
+        lines.append(", ".join(current_line))
 
     extracted = "\n".join(lines)
 

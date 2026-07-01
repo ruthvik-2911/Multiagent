@@ -32,6 +32,9 @@ def index_file(path):
         elif ext == ".txt":
             with open(path, "r", encoding="utf-8") as f:
                 text = f.read()
+        elif ext == ".pbix":
+            from backend.utils.pbix_reader import read_pbix_and_extract_csv
+            text = read_pbix_and_extract_csv(path)
         else:
             return
 
